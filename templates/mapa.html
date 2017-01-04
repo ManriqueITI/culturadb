@@ -1,0 +1,29 @@
+$def with(datos)
+<html>
+    <head></head>
+    <body>
+        <body style="background-color:Black">
+        <h1><center><font color="black" face="Aharoni">RECURSOS ASIGNADOS A PUEBLOS MAGICOS </font></h1>
+        <center><table border="10px"></center>
+            <tr>
+                <td width="20"><strong><center>NO</strong></td>
+                <td width="20"><strong><center>ENTIDADES</strong></td>
+                <td width="20"><strong><center>APORTACION FEDERAL</strong></td>
+                <td width="90"><strong>APORTACION ESTATAL</strong></td>
+                <td width="60"><strong><center>FECHA DE CONVENIO ORIGINAL</strong></td>
+                <td width="60"><strong>DETONADO</strong></td>
+                </tr>
+            $ posicion=0 
+            $for row in datos:
+            <tr>
+                <td> <font color="black" face="Aharoni"> $posicion </font></td> 
+                <td><font color="black" face="Aharoni">$row['ESTADO']</font></td>
+                <td><font color="black" face="Aharoni">$row['APORTACION FEDERAL']</font></td>
+                <td><font color="black" face="Aharoni">$row['APORTACIONESTATATL']</font></td>
+                <td><font color="black" face="Aharoni">$row['FECHADECONVENIOORIGINAL']</font></td>
+                <td><font color="black" face="Aharoni">$row['DETONADO']</font></td>
+                $ posicion += 1
+                
+                </tr>
+         </body>
+</html>

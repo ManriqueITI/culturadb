@@ -1,0 +1,33 @@
+$def with (form, results) 
+
+<br>
+    <div>
+        <h2 align="center"> *** RECURSOS ASIGNADOS A LOS PUEBLOS MAGICOS *** </h2>
+    </div>
+
+    <div align="center">
+    <form name="main" method="post" > 
+    $if not form.valid: <p class="error">Información erronea</p>
+    $:form.render()
+    
+    <button><input type="submit" /> </form></button>
+
+    <div>  
+    $if results:
+        <table id="tab1" align="center">
+            <th> ESTADO </th>
+            <th> FECHA </th>
+            <th> APORTACION </th>
+
+            $for row in results:
+                <tr>
+                    <td>$row[0]</td>
+                    <td>$row[1]</td>
+                    <td>$row[2]</td>
+                </tr>
+        </table>
+    </div>
+
+<br>
+<br>
+<br>
