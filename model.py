@@ -1,6 +1,6 @@
 import web, datetime
 
-db = web.database(dbn='mysql', db='carreras', user='root', pw='utec')
+db = web.database(dbn='mysql',host='ehc1u4pmphj917qf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', db='fifi37b224vf71j7', user='u9jha17rlju1in1g', pw='x5l7bs48xrqdc3uw')
 
 def get_posts():
     return db.select('carrerasuniversitarias',order='id DESC')
